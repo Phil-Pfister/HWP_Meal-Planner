@@ -1,9 +1,10 @@
 const axios = require("axios");
+require('dotenv').config();
 
-const recipe_id = "6252e4e1";
-const food_id = "6fd7540d";
-const recipeAPIKey = "75d2462707d2e87061c0473ed2b5f4c1";
-const foodAPIKey = "346ca7292ee7fac939f47d84d08712a9";
+const recipe_id = process.env.RECIPE_ID;
+const food_id = process.env.FOOD_ID;
+const recipeAPIKey = process.env.RECIPE_API_KEY;
+const foodAPIKey = process.env.FOOD_API_KEY;
 const QUERY = "thai curry";
 
 // const searchInput = document.getElementById('search-input');
