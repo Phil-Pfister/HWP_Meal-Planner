@@ -1,3 +1,41 @@
-nav {
-    background-color: #0097a7;
-}
+:root {
+    --primary: #0097a7;
+    
+    --light: white;
+    --dark: black;
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+
+
+header {
+    padding: 40px;
+    text-align: center;
+    background: var(--primary);
+    color: var(--light);
+    border-bottom-style: solid;
+    
+  }
+
+  h1 {
+    color: var(--light);
+  }
+  
+  
+  nav a {
+    
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    color: var(--light);
+  }
+  
+  nav a:hover {
+    color: var(--dark);
+    
+  }
+
+  .no-button {
+    background-color: var(--primary);
+  }
+
