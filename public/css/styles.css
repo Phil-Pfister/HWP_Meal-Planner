@@ -21,6 +21,9 @@ header {
     color: var(--light);
   }
   
+  nav {
+    background-color: var(--primary);
+}
   
   nav a {
     
