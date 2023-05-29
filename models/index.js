@@ -2,7 +2,7 @@ const User = require('./users');
 const Recipe = require('./recipes');
 
 User.hasMany(Recipe, {
-    foreignKey: 'recipe_id',
+    foreignKey: 'user_id',
 });
 
 Recipe.belongsTo(User, {
