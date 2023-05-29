@@ -57,4 +57,4 @@ axios
     console.error("Error retrieving data:", error);
   });
 
-  module.exports = searchAPI;
+  //module.exports = searchAPI;
