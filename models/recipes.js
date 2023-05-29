@@ -16,6 +16,12 @@ Recipe.init(
             allowNull: false,
 
         },
+        ingredients: {
+            type: DataTypes.STRING,
+        },
+        directions: {
+            type: DataTypes.TEXT,
+        }
     },
     {
         sequelize,
