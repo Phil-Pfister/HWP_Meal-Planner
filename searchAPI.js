@@ -1,14 +1,14 @@
-const axios = require("axios");
-require('dotenv').config();
+// const axios = require("axios");
+// require('dotenv').config();
 
-const recipe_id = process.env.RECIPE_ID;
-const food_id = process.env.FOOD_ID;
-const recipeAPIKey = process.env.RECIPE_API_KEY;
-const foodAPIKey = process.env.FOOD_API_KEY;
-const QUERY = "thai curry";
+// const recipe_id = process.env.RECIPE_ID;
+// const food_id = process.env.FOOD_ID;
+// const recipeAPIKey = process.env.RECIPE_API_KEY;
+// const foodAPIKey = process.env.FOOD_API_KEY;
+// const QUERY = "thai curry";
 
-// const searchInput = document.getElementById('search-input');
-// const QUERY = searchInput.value;
+// // const searchInput = document.getElementById('search-input');
+// // const QUERY = searchInput.value;
 
 // axios
 //   .all([
@@ -57,4 +57,4 @@ const QUERY = "thai curry";
 //     console.error("Error retrieving data:", error);
 //   });
 
-  //module.exports = searchAPI;
+//   //module.exports = searchAPI;
