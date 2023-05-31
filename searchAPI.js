@@ -65,8 +65,9 @@ searchAPI();
 // const foodAPIKey = process.env.FOOD_API_KEY;
 // const QUERY = "thai curry";
 
-// // const searchInput = document.getElementById('search-input');
-// // const QUERY = searchInput.value;
+
+
+
 
 
        
