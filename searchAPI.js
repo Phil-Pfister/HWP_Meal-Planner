@@ -37,12 +37,12 @@ axios
 ;      
       // Process and display the recipes
       console.log("Recipes:");
-      // console.log(recipes[i]);
-      // recipes.forEach((recipe) => {
-        // const recipeLabel = recipes[i].recipe.label;
-        // const recipeUrl = recipes[i].recipe.url;
-        // const recipeImg = recipes[i].recipe.image;
-        // const ingredients = recipes[i].recipe.ingredientLines;
+      
+      recipes.forEach((recipe) => {
+        const recipeLabel = recipe.recipe.label;
+        const recipeUrl = recipe.recipe.url;
+        const recipeImg = recipe.recipe.image;
+        const ingredients = recipe.recipe.ingredientLines;})
         // console.log(`Recipe: ${recipeLabel}`);
         // console.log(`URL: ${recipeUrl}`);
         // console.log(`Img: ${recipeImg}`);

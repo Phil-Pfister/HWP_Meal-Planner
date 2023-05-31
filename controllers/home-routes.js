@@ -9,11 +9,12 @@ const recipe_id = process.env.RECIPE_ID;
 
 const recipeAPIKey = process.env.RECIPE_API_KEY;
 
-const QUERY = ranQuery();
-console.log(QUERY);
+// const QUERY = ranQuery();
+// console.log(QUERY);
 router.get('/', async (req, res) => {
     try {
-        
+        const QUERY = ranQuery();
+        console.log(QUERY);
         const recipeData = await axios.get("https://api.edamam.com/search", {
             params: {
               q: QUERY,
