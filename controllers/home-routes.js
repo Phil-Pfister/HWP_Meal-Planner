@@ -1,17 +1,19 @@
 const router = require('express').Router();
 const { Recipe } = require('../models');
-const apidata = require('../searchAPI.js');
+
 const axios = require("axios");
 require('dotenv').config();
+const ranQuery = require('../utils/query');
 
 const recipe_id = process.env.RECIPE_ID;
 
 const recipeAPIKey = process.env.RECIPE_API_KEY;
 
-const QUERY = "chicken";
-
+const QUERY = ranQuery();
+console.log(QUERY);
 router.get('/', async (req, res) => {
     try {
+        
         const recipeData = await axios.get("https://api.edamam.com/search", {
             params: {
               q: QUERY,
