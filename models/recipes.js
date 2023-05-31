@@ -17,15 +17,20 @@ Recipe.init(
 
         },
         ingredients: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
         },
-        directions: {
+        url: {
+            type: DataTypes.TEXT,
+        },
+        img: {
+            type: DataTypes.TEXT,
+        },
+        ingredients: {
             type: DataTypes.TEXT,
         }
     },
     {
         sequelize,
-        freezeTableName: true,
         underscored: true,
         timestamps: false,
         modelName: 'recipe',
