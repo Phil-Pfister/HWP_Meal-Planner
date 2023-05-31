@@ -1,5 +1,6 @@
-const axios = require("axios");
-require('dotenv').config();
+// const axios = require("axios");
+// require('dotenv').config();
+
 
 const recipe_id = process.env.RECIPE_ID;
 const food_id = process.env.FOOD_ID;
@@ -47,9 +48,20 @@ axios
         console.log(`ingredients: ${ingredients}`);
         console.log("---");
 
+// const recipe_id = process.env.RECIPE_ID;
+// const food_id = process.env.FOOD_ID;
+// const recipeAPIKey = process.env.RECIPE_API_KEY;
+// const foodAPIKey = process.env.FOOD_API_KEY;
+// const QUERY = "thai curry";
+
+// // const searchInput = document.getElementById('search-input');
+// // const QUERY = searchInput.value;
+
+
        
        
       // });
+
 
       // Process and display the food items
       // console.log("Food Items:");
