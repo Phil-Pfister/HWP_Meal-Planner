@@ -20,6 +20,12 @@ header {
   h1 {
     color: var(--light);
   }
+
+  h2,
+  h3,
+  h4 {
+    color: var(--primary);
+  }
   
   nav {
     background-color: var(--primary);
@@ -40,5 +46,11 @@ header {
 
   .no-button {
     background-color: var(--primary);
+  }
+
+  .random-image {
+    height: 600px;
+    width: 600px;
+    
   }
 
