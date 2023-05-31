@@ -31,25 +31,26 @@ axios
   .then(
     axios.spread((recipeResponse, foodResponse) => {
       const recipes = recipeResponse.data.hits;
-      const foods = foodResponse.data.hints;
+      // const foods = foodResponse.data.hints;
       let i = Math.floor(Math.random() * recipes.length);
       
 ;      
       // Process and display the recipes
       console.log("Recipes:");
+      // console.log(recipes[i]);
       // recipes.forEach((recipe) => {
-        const recipeLabel = recipes[i].recipe.label;
-        const recipeUrl = recipes[i].recipe.url;
-        const recipeImg = recipes[i].recipe.image;
-        const ingredients = recipes[i].recipe.ingredientLines;
-        console.log(`Recipe: ${recipeLabel}`);
-        console.log(`URL: ${recipeUrl}`);
-        console.log(`Img: ${recipeImg}`);
-        console.log(`ingredients: ${ingredients}`);
-        console.log("---");
+        // const recipeLabel = recipes[i].recipe.label;
+        // const recipeUrl = recipes[i].recipe.url;
+        // const recipeImg = recipes[i].recipe.image;
+        // const ingredients = recipes[i].recipe.ingredientLines;
+        // console.log(`Recipe: ${recipeLabel}`);
+        // console.log(`URL: ${recipeUrl}`);
+        // console.log(`Img: ${recipeImg}`);
+        // console.log(`ingredients: ${ingredients}`);
+        // console.log("---");
+      return recipes[i];
 
-
-
+      
 
 
 
@@ -73,5 +74,5 @@ axios
     console.error("Error retrieving data:", error);
   });
 };
-searchAPI();
+// searchAPI();
   module.exports = searchAPI;
