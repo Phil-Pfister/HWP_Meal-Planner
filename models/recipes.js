@@ -17,7 +17,7 @@ Recipe.init(
 
         },
         ingredients: {
-            type: DataTypes.STRING,
+            type: DataTypes.TEXT,
         },
         url: {
             type: DataTypes.TEXT,
