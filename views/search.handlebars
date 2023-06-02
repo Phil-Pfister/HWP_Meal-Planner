@@ -5,10 +5,9 @@
       <img class="card-img-top" src="{{recipe.image}}" alt="{{recipe.label}}">
       
       <div class="card-body">
-        <h5 class="card-title rec-name">{{recipe.label}}</h5>
-        
-        <button class="btn btn-primary save-button" data-image="{{recipe.image}}" data-ing="{{recipe.ingredientLines}}" data-id="{{recipe.url}}" data-name="{{recipe.label}}">Save</button>
-        
+        <h5 class="card-title">{{recipe.label}}</h5>
+        {{!-- <p class="card-text">{{recipe.ingredientLines}}</p> --}}
+        <a href="#" class="btn btn-primary" data-id="{{id}}">Save</a>
         <a href="{{recipe.url}}" class="btn btn-primary">Instructions</a>
       </div>
     </div>
