@@ -1,6 +1,7 @@
 :root {
     --primary: #0097a7;
     
+    --grey: gray;
     --light: white;
     --dark: black;
     --error: rgb(228, 46, 1);
@@ -59,3 +60,44 @@ header {
     height: 200px;
   }
 
+  #login-form, #signup-form {
+    background-color: var(--primary);
+  }
+
+  .form-header {
+    color: var(--light);
+    margin: 1rem;
+  }
+
+  .btn {
+    background-color: var(--grey);
+    border-color: var(--grey);
+  }
+
+  #recipe-card {
+    background-color: var(--primary);
+  }
+
+  .card-image-top {
+    width: 10%;
+    height: 10%;
+  }
+
+  #recipe-name {
+    color: var(--dark);
+    font-weight: bold;
+    text-align: center;
+    color: var(--light);
+  }
+
+  .recipe-details {
+    list-style-type: none;
+    color: var(--light);
+    font-size: 2rem;
+  }
+  
+  #save-btn {
+    background-color: var(--light);
+  }
+  
+ 
