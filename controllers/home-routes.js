@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
        const oneRecipe = recipeData.data.hits[i].recipe;
        const recipeId = oneRecipe.uri.slice(-32)
        console.log(oneRecipe.uri.slice(-32));
-        res.render('homepage',{ oneRecipe, recipeId });
+        res.render('homepage',{ oneRecipe, recipeId, logged_in: req.session.logged_in });
     } catch (err) {
         res.status(500).json(err);
     }
