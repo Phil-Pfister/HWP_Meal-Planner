@@ -1,0 +1,14 @@
+<div>
+    {{#if userRecipes.length}}
+
+    <div>
+        <h3>your recipes</h3>
+        {{#each userRecipes}}
+        <div class="card">
+            {{name}}
+            {{ingredients}}
+            {{img}}
+            {{url}}
+        </div>
+    </div>
+</div>

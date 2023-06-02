@@ -64,4 +64,32 @@ router.get('/recipe-details', async (req, res) => {
     }
 });
 
+router.get('/recipes', async (req, res) => {
+    try {
+        const recipeData = await Recipe.findAll({
+            attributes: ['id', 'user_id', 'name', 'ingredients', 'url', 'img'],
+            include: [
+                {
+                    model: User,
+                    attributes: ['username']
+
+        }
+    ],
+    where: {
+        user_id: req.session.user_id
+    }
+    
+    });
+
+    const userRecipes = recipeData.map(recipe => recipe.get({ plain: true }));
+
+    res.render('userRecipes', {
+        userRecipes,
+        logged_in: req.session.logged_in
+    });
+ } catch (err) {
+    res.status(500).json(err);
+ }
+});
+
 module.exports = router;
