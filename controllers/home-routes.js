@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Recipe } = require('../models');
+const { User, Recipe } = require('../models');
 
 const axios = require("axios");
 require('dotenv').config();

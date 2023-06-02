@@ -1,20 +1,21 @@
-<div class="container-fluid border">
-    <div class="row border">
-           <h2>Recipe Name</h2> 
-    </div>
-    <div class="row border">
-        <div class="col border">
-            <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_400/https://visitpearland.com/wp-content/uploads/2021/03/@killensburgers-400x397.jpg">
-        </div>
-        <div class="col border">
-            <ul>
-                <li>URL: www.pizza.com</li>
-                <ul>Ingredients: 
-                    <li>Pizza Dough</li>
-                    <li>Pizza Sauce</li>
-                    <li>Pepperoni</li>
+<div class="container-fluid h-75  d-flex align-items-center">
+    <div id="recipe-card" class="container shadow-lg">
+        <div class="row">
+            <div class="col d-flex justify-content-center">
+                <img id="recipe-img" class="img-fluid" src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_400/https://visitpearland.com/wp-content/uploads/2021/03/@killensburgers-400x397.jpg">
+            </div>
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <h2 id="recipe-name">Recipe Name</h2> 
+                <ul class="recipe-details m-3 font align-self-start">
+                    <li>URL: www.pizza.com</li>
+                    <li class="recipe-details">Ingredients</li>
+                        <li>-Pizza Dough</li>
+                        <li>-Pizza Sauce</li>
+                        <li>-Pepperoni</li>
+                    </ul>
                 </ul>
-            </ul>
+                <button type="button" id="save-btn" class="btn btn-light">Save</button>
+            </div>
         </div>
     </div>
 </div>

@@ -1,28 +1,16 @@
-<div>
-     <div class="container">
+<div class="container-fluid d-flex flex-wrap justify-content-center m-3">
   {{#if recipes.length}}
-  
-  <div class="col-md-8 menu-container post-list">
-    <h3>Search Results:</h3>
-
     {{#each recipes}}
-    <div class="col-md-12 card d-flex">
-      <div class="card-body flex-row">
-        <img src="{{recipe.image}}" alt="" class="thumb">
-        <h4><a href="{{recipes.url}}">{{recipe.label}}</a></h4>
-        <br>
-      </div>
-      
-      <div>
-        <p>{{recipe.ingredientLines}}</p>
-      </div>
-      
-      <div>
-        <button class="btn btn-md btn-primary" data-id="{{id}}">Save</button>
+    <div class="card m-2" style="width: 18rem;">
+      <img class="card-img-top" src="{{recipe.image}}" alt="{{recipe.label}}">
+      <div class="card-body">
+        <h5 class="card-title">{{recipe.label}}</h5>
+        {{!-- <p class="card-text">{{recipe.ingredientLines}}</p> --}}
+        <a href="#" class="btn btn-primary" data-id="{{id}}">Save</a>
         <a href="api/edit/{{id}}" class="btn">Edit</a>
+        <a href="{{recipe.url}}" class="btn btn-primary">Instructions</a>
       </div>
     </div>
-    {{/each}}
-  </div>
+    {{/each}}   
   {{/if}}
 </div>
