@@ -6,9 +6,13 @@
         {{#each userRecipes}}
         <div class="card">
             {{name}}
-            {{ingredients}}
-            {{img}}
-            {{url}}
+            <img class="card-image-top" src="{{img}}" alt=""> 
+            <div class="card-body">
+                <p>{{ingredients}}</p>
+            </div>
+            <a href="{{url}}">website</a>
         </div>
+        {{/each}}
     </div>
+    {{/if}}
 </div>
