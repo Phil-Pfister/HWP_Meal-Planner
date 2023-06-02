@@ -100,4 +100,6 @@ header {
     background-color: var(--light);
   }
   
- 
+ .meal-card {
+  width: 14rem;
+ }
