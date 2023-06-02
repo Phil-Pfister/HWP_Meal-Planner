@@ -52,4 +52,15 @@ router.get('/sign-up', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.get('/recipe-details', async (req, res) => {
+    try {
+        res.render('recipeDetails');
+        res.status(200);
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
+
 module.exports = router;
