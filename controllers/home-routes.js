@@ -26,8 +26,9 @@ router.get('/', async (req, res) => {
       
         let i = Math.floor(Math.random() * 10);
        const oneRecipe = recipeData.data.hits[i].recipe;
-        // console.log('recipeData', oneRecipe);
-        res.render('homepage',{ oneRecipe });
+       const recipeId = oneRecipe.uri.slice(-32)
+       console.log(oneRecipe.uri.slice(-32));
+        res.render('homepage',{ oneRecipe, recipeId });
     } catch (err) {
         res.status(500).json(err);
     }

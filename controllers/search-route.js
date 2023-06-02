@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Recipe } = require('../models');
 
 const axios = require("axios");
+
 require('dotenv').config();
 
 
@@ -9,24 +10,28 @@ const recipe_id = process.env.RECIPE_ID;
 
 const recipeAPIKey = process.env.RECIPE_API_KEY;
 
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
+
     try {
-        const QUERY = 'soup';
+        console.log(req.params.id)
         const recipeData = await axios.get("https://api.edamam.com/search", {
             params: {
-              q: QUERY,
+              q: req.params.id,
               app_id: recipe_id,
               app_key: recipeAPIKey,
-              random: true,
+              
             },
           });
-
+          console.log(recipeData.data.hits);
           const recipes = recipeData.data.hits;
-          console.log(recipes);
+        
+          
           res.render('search', { recipes });
     } catch (err) {
-        res.status.json(err);
+        res.status(400).json(err);
     }
 });
+
+
 
 module.exports = router;

@@ -1,6 +1,7 @@
 <div class="container-fluid d-flex flex-wrap justify-content-center m-3">
   {{#if recipes.length}}
     {{#each recipes}}
+
     <div class="card m-2" style="width: 18rem;">
       <img class="card-img-top" src="{{recipe.image}}" alt="{{recipe.label}}">
       <div class="card-body">
@@ -9,6 +10,7 @@
         <a href="#" class="btn btn-primary" data-id="{{id}}">Save</a>
         <a href="api/edit/{{id}}" class="btn">Edit</a>
         <a href="{{recipe.url}}" class="btn btn-primary">Instructions</a>
+
       </div>
     </div>
     {{/each}}   
