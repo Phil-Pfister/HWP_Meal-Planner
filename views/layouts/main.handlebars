@@ -20,7 +20,7 @@
             <a href="/recipes">Your Recipes</a>
 
             {{#if logged_in}}
-            <a href="/logout">Logout</a>
+            <a id="logout" href="/">Logout</a>
             {{else}}
             <a href="/login">Login</a>
             <a href="/sign-up">Sign Up</a>
@@ -31,6 +31,8 @@
     <main>
         {{{body}}}
     </main>
-   
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
     <script src="/js/search.js"><{{!}}/script>
 </body>
