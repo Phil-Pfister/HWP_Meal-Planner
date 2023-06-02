@@ -5,8 +5,8 @@
         <h3>your recipes</h3>
         {{#each userRecipes}}
         <div class="card">
-            {{name}}
-            <img class="card-image-top" src="{{img}}" alt=""> 
+            <h3 id="rec-name">{{name}}</h3>
+            <img class="card-image-top" data-label="rec-image" src="{{img}}" alt=""> 
             <div class="card-body">
                 <p>{{ingredients}}</p>
             </div>
