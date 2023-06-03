@@ -1,22 +1,28 @@
-{{!-- <div>
+<div>
     {{#if userRecipes.length}}
 
     <div>
-        <h3>your recipes</h3>
+        <h3>{{user.username}}'s Recipes</h3>
+        <div class="container-fluid h-75 d-flex flex-wrap justify-content-center">
         {{#each userRecipes}}
-        <div class="card">
-            {{name}}
-            <img class="card-image-top" src="{{img}}" alt=""> 
-            <div class="card-body">
-                <p>{{ingredients}}</p>
-            </div>
-            <a href="{{url}}">website</a>
+        
+        <div class="meal-card card">
+            <h3 class="card-title" id="rec-name">{{name}}</h3>
+            <img class="card-image-top" data-label="rec-image" src="{{img}}" alt=""> 
+            
+                {{!-- <p class="card-text">{{ingredients}}</p> --}}
+                <a href="{{url}}">See Full Instructions</a>
+           <div>
+            <button class="btn delete-button">Delete</button>
+           </div>
         </div>
+        
         {{/each}}
-    </div>
+        </div>
+        </div>
     {{/if}}
-</div> --}}
-<h3 class="text-center">Meal Planner</h3>
+</div>
+{{!-- <h3 class="text-center">Meal Planner</h3>
 <div class="container-fluid h-75 d-flex flex-wrap justify-content-center">
     <div class="meal-card card ">
         <img class="" src="https://www.allrecipes.com/thmb/9vcSuJHfuvou06XPXLON8VioLiM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/6776_Pizza-Dough_ddmfs_4x3_1724-fd91f26e0bd6400a9e89c6866336532b.jpg" alt="">             
@@ -102,4 +108,4 @@
             <a href="" class="btn btn-primary">Link</a> 
         </div>
     </div>
-</div>
+</div> --}}

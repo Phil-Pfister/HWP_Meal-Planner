@@ -24,9 +24,12 @@ router.get('/:id', async (req, res) => {
           });
           
           const recipes = recipeData.data.hits;
-        
           
-          res.render('search', { recipes });
+          recipes.forEach(recipe => {
+           recipe.recipe.uri = recipe.recipe.uri.slice(-32)
+          });
+         
+          res.render('search', { recipes, logged_in: req.session.logged_in });
     } catch (err) {
         res.status(400).json(err);
     }

@@ -78,10 +78,10 @@ header {
     background-color: var(--primary);
   }
 
-  .card-image-top {
+  /* .card-image-top {
     width: 10%;
     height: 10%;
-  }
+  } */
 
   #recipe-name {
     color: var(--dark);
@@ -102,4 +102,9 @@ header {
   
  .meal-card {
   width: 14rem;
+  height: 25rem;
+ }
+
+ .delete-button {
+  background-color: var(--error);
  }

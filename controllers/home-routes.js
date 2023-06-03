@@ -81,10 +81,14 @@ router.get('/recipes', async (req, res) => {
     
     });
 
-    const userRecipes = recipeData.map(recipe => recipe.get({ plain: true }));
+    const userData = await User.findByPk(req.session.user_id);
 
+    const userRecipes = recipeData.map(recipe => recipe.get({ plain: true }));
+    const user = userData.get({ plain: true});
+    
     res.render('userRecipes', {
         userRecipes,
+        user,
         logged_in: req.session.logged_in
     });
  } catch (err) {
