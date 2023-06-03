@@ -41,6 +41,6 @@ sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`Now listening on ${PORT} 🟢`);
   }).on('error', (err) => {
-    console.error(`Error, cannot connect to the server at ${PORT}🔴`);
+    console.error(`${err}, cannot connect to the server at ${PORT}🔴`);
   });
 });
