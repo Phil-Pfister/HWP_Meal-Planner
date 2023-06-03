@@ -104,3 +104,7 @@ header {
   width: 14rem;
   height: 25rem;
  }
+
+ .delete-button {
+  background-color: var(--error);
+ }
