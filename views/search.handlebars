@@ -1,0 +1,17 @@
+<div class="container-fluid d-flex flex-wrap justify-content-center m-3 rec-card-body">
+  {{#if recipes.length}}
+    {{#each recipes}}
+    <div class="card m-2" style="width: 18rem;">
+      <img class="card-img-top" src="{{recipe.image}}" alt="{{recipe.label}}">
+      
+      <div class="card-body">
+        <h5 class="card-title">{{recipe.label}}</h5>
+        {{!-- <p class="card-text">{{recipe.ingredientLines}}</p> --}}
+        <button class="btn btn-primary" data-ing="{{recipe.ingredientLines}}" data-image="{{recipe.image}}" data-name="{{recipe.label}}" data-id="{{recipe.url}}">Save</button>
+        <a href="{{recipe.url}}" class="btn btn-primary">Instructions</a>
+      </div>
+    </div>
+    {{/each}}   
+  {{/if}}
+</div>
+<script src='/js/rec-sav.js'></script>

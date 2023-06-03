@@ -1,27 +1,29 @@
 <div class="d-flex align-items-center h-75">
-    <div class="border border-danger container text-center">
-        <h2 class="text-center">Sign Up</h2>
-        <form class="col">
-        <div class="row mb-3">
-            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-            <div class="col-sm-10">
-            <input type="email" class="form-control" id="inputEmail3">
+    <div id="signup-form" class="border container text-center">
+        <h2 class="form-header text-center">Sign Up</h2>
+        <form id="signup-form" class="col">
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                <input type="email" id="email-signup" class="form-control" id="inputEmail3">
+                </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <label for="inputUsername3" class="col-sm-2 col-form-label">Username</label>
-            <div class="col-sm-10">
-            <input type="username" class="form-control" id="inputUsername3">
+            <div class="row mb-3">
+                <label for="inputUsername3" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-10">
+                <input type="username" id="username-signup" class="form-control" id="inputUsername3">
+                </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-            <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword3">
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                <input type="password" id="password-signup" class="form-control" id="inputPassword3">
+                </div>
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Sign Up</button>
-        <p>Not a user? <a href="http://localhost:3001/login">Log In</a> instead.</p>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <p>Not a user? <a href="/login">Log In</a> instead.</p>
         </form>
     </div>
 </div>
+<script src="./js/signup.js"></script>
+

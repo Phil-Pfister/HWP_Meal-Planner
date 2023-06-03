@@ -25,9 +25,7 @@ Recipe.init(
         img: {
             type: DataTypes.TEXT,
         },
-        ingredients: {
-            type: DataTypes.TEXT,
-        }
+
     },
     {
         sequelize,
