@@ -78,10 +78,10 @@ header {
     background-color: var(--primary);
   }
 
-  .card-image-top {
+  /* .card-image-top {
     width: 10%;
     height: 10%;
-  }
+  } */
 
   #recipe-name {
     color: var(--dark);

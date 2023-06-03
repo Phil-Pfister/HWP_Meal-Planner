@@ -6,7 +6,8 @@ const saveButtonHandler = async (event) => {
     const img = event.target.getAttribute('data-image');
     const ingredients = event.target.getAttribute('data-ing');
     const url = event.target.getAttribute('data-id')
-    console.log(url);
+
+    console.log("name -> ", name, '\nimg -> ', img, '\ningredients -> ', ingredients, '\nurl -> ', url)
     
     const response = await fetch('/api/save', {
         method: 'POST',
