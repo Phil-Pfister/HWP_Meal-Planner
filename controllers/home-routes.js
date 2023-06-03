@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Recipe } = require('../models');
-
+const withAuth = require('../utils/auth');
 const axios = require("axios");
 require('dotenv').config();
 const ranQuery = require('../utils/query');
@@ -64,7 +64,7 @@ router.get('/recipe-details', async (req, res) => {
     }
 });
 
-router.get('/recipes', async (req, res) => {
+router.get('/recipes', withAuth, async (req, res) => {
     try {
         const recipeData = await Recipe.findAll({
             attributes: ['id', 'user_id', 'name', 'ingredients', 'url', 'img'],

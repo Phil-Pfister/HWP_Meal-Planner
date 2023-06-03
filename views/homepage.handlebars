@@ -2,7 +2,10 @@
     <div class="d-flex flex-column align-items-center">
         <h2 class="m-2">Recipe of the Day</h2>
         <img class="random-image img-fluid" src="{{oneRecipe.image}}" alt="{{recipe.name}}">
-        <h3 class="m-2">{{oneRecipe.label}}</h3>    
+        {{#if logged_in}}
+        <button class="btn save-button">Save</button>
+        {{/if}}
+        <a href="{{oneRecipe.url}}" target="_blank" rel="noopener noreferrer"><h3 class="m-2 rec-link">{{oneRecipe.label}}</h3></a>    
     </div>
 </div>
 
