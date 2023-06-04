@@ -1,15 +1,17 @@
 <div class="container h-75 align-items-center">
     <h2 class="m-2 row justify-content-center">Recipe of the Day</h2>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center rec-card-body">
         <div id='home-card' class="card mb-3 col-4 p-0">
             <img class="card-img-top" src="{{oneRecipe.image}}" alt="{{recipe.name}}">
             <div class="card-body justify-content-center">
                 <h5 class="card-title">{{oneRecipe.label}}</h5>
                 <p class="card-text"><small class="text-muted">Click the button below to add to your Recipes</small></p>
+                {{#if logged_in}}
                 <button class="btn btn-primary save-button" data-ing="{{oneRecipe.ingredientLines}}" data-image="{{oneRecipe.image}}" data-name="{{oneRecipe.label}}" data-id="{{oneRecipe.url}}">Save</button>
+                {{/if}}
             </div>
     </div>
     </div>
 </div>
-<script src="/js/rec-sav.js"></script>
+<script src="./js/rec-sav.js"></script>
 
