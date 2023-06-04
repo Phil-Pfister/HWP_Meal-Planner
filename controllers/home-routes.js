@@ -15,12 +15,13 @@ router.get('/', async (req, res) => {
     try {
         const QUERY = ranQuery();
         console.log(QUERY);
+        const z = Math.floor(Math.random() * 100);
         const recipeData = await axios.get("https://api.edamam.com/search", {
             params: {
               q: QUERY,
               app_id: recipe_id,
               app_key: recipeAPIKey,
-              random: true,
+              from: z,
             },
           });
       
