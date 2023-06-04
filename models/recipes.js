@@ -25,6 +25,9 @@ Recipe.init(
         img: {
             type: DataTypes.TEXT,
         },
+        day: {
+            type: DataTypes.STRING,
+        }
 
     },
     {

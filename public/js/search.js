@@ -1,5 +1,4 @@
 
-
 const searchFormHandler = async (event) => {
     event.preventDefault();
     const QUERY = document.querySelector('#search-bar').value;
@@ -15,9 +14,4 @@ const searchFormHandler = async (event) => {
     }
   };
 
-  
-   
-
-
-
-document.querySelector('.search-button').addEventListener('click', searchFormHandler);
+document.querySelector('#search-form').addEventListener('submit', searchFormHandler);

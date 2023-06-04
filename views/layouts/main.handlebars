@@ -7,23 +7,24 @@
 </head>
 
 <body>
-    <div class="flex-column justify-content-around"></div>
-    <header class="d-flex justify-content-between p-3">
+    <header class="d-flex justify-content-between align-items-center p-1">
         <div class="d-flex search-group">
-            <h1>Foodies Delight</h1>
-            <input class="ms-4" type="text" id="search-bar" placeholder="Search Recipes">
-            <button class="search-button" type="submit">Go</button>
+            <h1>Meal Match</h1>
         </div>
         
-        <nav>
-            <a href="/">Home</a>
+        <form id="search-form">
+                <input class="ms-4" type="text" id="search-bar" placeholder="Search Recipes">
+                <button class="search-button" type="submit">Go</button>
+        </form>
 
+        <nav class="d-flex justify-content-around">
+            <a class="nav-link" href="/">Home</a>
             {{#if logged_in}}
-            <a href="/recipes">Your Recipes</a>
-            <a id="logout" href="/">Logout</a>
+            <a class="nav-link" href="/recipes">Your Recipes</a>
+            <a class="nav-link" id="logout" href="/">Logout</a>
             {{else}}
-            <a href="/login">Login</a>
-            <a href="/sign-up">Sign Up</a>
+            <a class="nav-link" href="/login">Login</a>
+            <a class="nav-link" href="/sign-up">Sign Up</a>
 
             {{/if}}
         </nav>

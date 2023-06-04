@@ -1,20 +1,33 @@
 <div class="container-fluid h-75  d-flex align-items-center">
-    <div id="recipe-card" class="container shadow-lg">
-        <div class="row">
-            <div class="col d-flex justify-content-center">
-                <img id="recipe-img" class="img-fluid" src="https://sp-ao.shortpixel.ai/client/to_webp,q_lossy,ret_img,w_400/https://visitpearland.com/wp-content/uploads/2021/03/@killensburgers-400x397.jpg">
+    <div id="recipe-card" class="container h-75 shadow-lg">
+        <div class="row h-100">
+            <div class="col h-100 p-0">
+                <img class='img-fluid h-100' id="{{recipe.name}}" src="{{recipe.img}}">
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
-                <h2 id="recipe-name">Recipe Name</h2> 
+                <h2 id="recipe-name">{{recipe.name}}</h2> 
                 <ul class="recipe-details m-3 font align-self-start">
-                    <li>URL: www.pizza.com</li>
+                    <li>{{recipe.url}}</li>
                     <li class="recipe-details">Ingredients</li>
                         <li>-Pizza Dough</li>
                         <li>-Pizza Sauce</li>
                         <li>-Pepperoni</li>
                     </ul>
                 </ul>
-                <button type="button" id="save-btn" class="btn btn-light">Save</button>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add to Meal Plan
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/mealplanner">Monday</a>
+                        <a class="dropdown-item" href="/mealplanner">Tuesday</a>
+                        <a class="dropdown-item" href="/mealplanner">Wednesday</a>
+                        <a class="dropdown-item" href="/mealplanner">Thursday</a>
+                        <a class="dropdown-item" href="/mealplanner">Friday</a>
+                        <a class="dropdown-item" href="/mealplanner">Saturday</a>
+                        <a class="dropdown-item" href="/mealplanner">Sunday</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

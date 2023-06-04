@@ -54,16 +54,6 @@ router.get('/sign-up', async (req, res) => {
     }
 });
 
-router.get('/recipe-details', async (req, res) => {
-    try {
-        res.render('recipeDetails');
-        res.status(200);
-    } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-    }
-});
-
 router.get('/recipes', withAuth, async (req, res) => {
     try {
         const recipeData = await Recipe.findAll({
@@ -95,5 +85,9 @@ router.get('/recipes', withAuth, async (req, res) => {
     res.status(500).json(err);
  }
 });
+
+router.get('/meal-planner', withAuth, (req, res) => {
+    res.render('mealPlanner');
+})
 
 module.exports = router;
