@@ -16,4 +16,4 @@ async function deleteFormHandler(event) {
   }
   }
   
-  document.querySelector('.rec-card').addEventListener('click', deleteFormHandler);
+  document.querySelector('.rec-card').addEventListener('mousedown', deleteFormHandler);
