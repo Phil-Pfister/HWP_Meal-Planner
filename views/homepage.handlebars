@@ -1,12 +1,15 @@
-<div class="container-fluid d-flex h-75 justify-content-center align-items-center mt-5">
-    <div class="d-flex flex-column align-items-center rec-card-body">
-        <h2 class="m-2">Recipe of the Day</h2>
-        <img class="random-image img-fluid" src="{{oneRecipe.image}}" alt="{{recipe.name}}">
-        {{#if logged_in}}
-        <button class="btn save-button" data-ing="{{oneRecipe.ingredientLines}}" data-image="{{oneRecipe.image}}" data-name="{{oneRecipe.label}}" data-id="{{oneRecipe.url}}">Save</button>
-        <script src="/js/rec-sav.js"></script>
-        {{/if}}
-        <a href="{{oneRecipe.url}}" target="_blank" rel="noopener noreferrer"><h3 class="m-2 rec-link">{{oneRecipe.label}}</h3></a>    
+<div class="container h-75 align-items-center">
+    <h2 class="m-2 row justify-content-center">Recipe of the Day</h2>
+    <div class="row justify-content-center">
+        <div id='home-card' class="card mb-3 col-4 p-0">
+            <img class="card-img-top" src="{{oneRecipe.image}}" alt="{{recipe.name}}">
+            <div class="card-body justify-content-center">
+                <h5 class="card-title">{{oneRecipe.label}}</h5>
+                <p class="card-text"><small class="text-muted">Click the button below to add to your Recipes</small></p>
+                <button class="btn btn-primary save-button" data-ing="{{oneRecipe.ingredientLines}}" data-image="{{oneRecipe.image}}" data-name="{{oneRecipe.label}}" data-id="{{oneRecipe.url}}">Save</button>
+            </div>
+    </div>
     </div>
 </div>
+<script src="/js/rec-sav.js"></script>
 

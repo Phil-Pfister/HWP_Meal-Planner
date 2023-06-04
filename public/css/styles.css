@@ -1,7 +1,7 @@
 :root {
     --primary: #0097a7;
     
-    --grey: gray;
+    --grey: rgb(180, 180, 180);
     --light: white;
     --dark: black;
     --error: rgb(228, 46, 1);
@@ -34,19 +34,32 @@ header {
   
   nav {
     background-color: var(--primary);
+    width: 20%;
 }
   
   nav a {
-    
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
     color: var(--light);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  #home-card {
+    background-color: var(--primary);
   }
   
   nav a:hover {
     color: var(--dark);
     
+  }
+
+  #search-form {
+    margin: 0;
+  }
+
+  #search-bar, .search-button {
+    border-radius: 10px;
   }
 
   .no-button {
@@ -78,7 +91,16 @@ header {
     border-color: var(--grey);
   }
 
+  .btn:hover {
+    background-color: var(--grey);
+  }
+  
+
   #recipe-card {
+    background-color: var(--primary);
+  }
+
+  .card-footer {
     background-color: var(--primary);
   }
 
@@ -100,8 +122,9 @@ header {
     font-size: 2rem;
   }
   
-  #save-btn {
+  .save-btn {
     background-color: var(--light);
+    color: var(--dark);
   }
   
  .meal-card {
@@ -109,17 +132,21 @@ header {
   height: 25rem;
  }
 
+ .card-title {
+  color: var(--light);
+ }
+
  .delete-button {
   background-color: var(--error);
  }
 
  .save-button {
-  background-color: rgb(102, 183, 241);
-  color: var(--light)
+  background-color: var(--light);
+  color: var(--dark);
  }
 
  .save-button:hover {
-  background-color: cornflowerblue;
+  background-color: var(--grey);
  }
 
  .rec-link:hover {
@@ -127,5 +154,22 @@ header {
   
  }
 
+#search-card {
+  background-color: var(--primary);
+}
 
- 
+#hidden-ingredients {
+  display: none;
+}
+
+#login-form, #signup-form {
+  border-radius: 10px;
+}
+
+#recipe-card {
+  border-radius: 10px;
+}
+
+#recipe-img {
+  border-radius: 10px 0px 0px 10px;
+}
