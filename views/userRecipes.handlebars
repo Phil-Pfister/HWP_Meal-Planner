@@ -3,25 +3,30 @@
 
     <div>
         <h3>{{user.username}}'s Recipes</h3>
-        <div class="container-fluid h-75 d-flex flex-wrap justify-content-center">
+        <div class="container-fluid h-75 d-flex flex-wrap justify-content-center rec-card">
         {{#each userRecipes}}
         
         <div class="meal-card card">
             <h3 class="card-title" id="rec-name">{{name}}</h3>
             <img class="card-image-top" data-label="rec-image" src="{{img}}" alt=""> 
             
-                {{!-- <p class="card-text">{{ingredients}}</p> --}}
-                <a href="{{url}}">See Full Instructions</a>
+              <div>  {{!-- <p class="card-text">{{ingredients}}</p> --}}
+                <a href="{{url}}" target="_blank">See Full Instructions</a>
+                </div>
            <div>
             <button class="btn delete-button" data-id="{{id}}">Delete</button>
+           
            </div>
         </div>
         
         {{/each}}
+        
         </div>
         </div>
+        
     {{/if}}
 </div>
+ <script src="./js/delete.js"></script>
 {{!-- <h3 class="text-center">Meal Planner</h3>
 <div class="container-fluid h-75 d-flex flex-wrap justify-content-center">
     <div class="meal-card card ">

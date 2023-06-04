@@ -27,6 +27,10 @@ header {
   h4 {
     color: var(--primary);
   }
+
+  a {
+    text-decoration: none;
+  }
   
   nav {
     background-color: var(--primary);
@@ -108,3 +112,20 @@ header {
  .delete-button {
   background-color: var(--error);
  }
+
+ .save-button {
+  background-color: rgb(102, 183, 241);
+  color: var(--light)
+ }
+
+ .save-button:hover {
+  background-color: cornflowerblue;
+ }
+
+ .rec-link:hover {
+  color: aqua;
+  
+ }
+
+
+ 

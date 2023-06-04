@@ -7,6 +7,7 @@
       <div class="card-body">
         <h5 class="card-title">{{recipe.label}}</h5>
         {{!-- <p class="card-text">{{recipe.ingredientLines}}</p> --}}
+        
         <button class="btn btn-primary" data-ing="{{recipe.ingredientLines}}" data-image="{{recipe.image}}" data-name="{{recipe.label}}" data-id="{{recipe.url}}">Save</button>
         <a href="{{recipe.url}}" class="btn btn-primary">Instructions</a>
       </div>
@@ -14,4 +15,4 @@
     {{/each}}   
   {{/if}}
 </div>
-<script src='/js/rec-sav.js'></script>
+<script src='../js/rec-sav.js'></script>
