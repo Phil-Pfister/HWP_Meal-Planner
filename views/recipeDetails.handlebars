@@ -1,8 +1,7 @@
-<div class="container-fluid h-75  d-flex align-items-center">
-    <div id="recipe-card" class="container h-75 shadow-lg">
-        <div class="row h-100">
-            <div class="col h-100 p-0">
-                <img class='img-fluid h-100' id="{{recipe.name}}" src="{{recipe.img}}">
+{{!-- <div id="recipe-card" class="container h-75 shadow-lg">
+    <div id="recipe-detail-container" class="row h-100">
+            <div class="col  h-100 p-0">
+                <img id="recipe-img" class='img-fluid h-100 h-md-40' id="{{recipe.name}}" src="{{recipe.img}}">
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
                 <h2 id="recipe-name">{{recipe.name}}</h2> 
@@ -12,6 +11,10 @@
                         <p>{{recipe.ingredients}}</p>
                     </ul>
                 </ul>
+                <div class="d-flex justify-content-around pb-2">
+                    <button class="btn btn-primary save-btn" data-ing="{{recipe.ingredientLines}}" data-image="{{recipe.image}}" data-name="{{recipe.label}}" data-id="{{recipe.url}}">Save</button>
+                    <a href="{{recipe.url}}" class="btn btn-primary save-btn">Recipe</a>
+                </div>
                 <div class="dropdown">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Add to Meal Plan
@@ -29,4 +32,72 @@
             </div>
         </div>
     </div>
+</div> --}}
+
+<div id="recipe-details-container">
+    <div id="recipe-details-card">
+        <img id="recipe-details-img" id="{{recipe.name}}" src="{{recipe.img}}">
+        <div id="details-body">
+            <h2 id="recipe-details-name">{{recipe.name}}</h2> 
+            <h3 id="recipe-details-ing">Ingredients</h3>
+            <ul> 
+                <li id="recipe-ing-list">{{recipe.ingredients}}</li> 
+            </ul>
+            <div id="button-container">
+                <button class="detail-btn btn btn-primary save-btn" data-ing="{{recipe.ingredientLines}}" data-image="{{recipe.image}}" data-name="{{recipe.label}}" data-id="{{recipe.url}}">Save</button>
+                <a href="{{recipe.url}}" class="detail-btn btn btn-primary save-btn">Recipe</a>
+                <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Add to Meal Plan
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="/mealplanner">Monday</a>
+                            <a class="dropdown-item" href="/mealplanner">Tuesday</a>
+                            <a class="dropdown-item" href="/mealplanner">Wednesday</a>
+                            <a class="dropdown-item" href="/mealplanner">Thursday</a>
+                            <a class="dropdown-item" href="/mealplanner">Friday</a>
+                            <a class="dropdown-item" href="/mealplanner">Saturday</a>
+                            <a class="dropdown-item" href="/mealplanner">Sunday</a>
+                        </div>
+                    </div>
+                </div> 
+         </div> 
+    </div>
 </div>
+
+{{!-- <div id="recipe-holder" class="container-fluid h-75  d-flex align-items-center ">
+    <div id="recipe-card" class="container h-75 shadow-lg">
+        <div id="recipe-detail-container" class="row h-100">
+            <div class="col  h-100 p-0">
+                <img id="recipe-img" class='img-fluid h-100 h-md-40' id="{{recipe.name}}" src="{{recipe.img}}">
+            </div>
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <h2 id="recipe-name">{{recipe.name}}</h2> 
+                <ul class="recipe-details m-3 font align-self-start">
+                    <li>{{recipe.url}}</li>
+                    <li class="recipe-details">Ingredients</li>
+                        <p>{{recipe.ingredients}}</p>
+                    </ul>
+                </ul>
+                <div class="d-flex justify-content-around pb-2">
+                    <button class="btn btn-primary save-btn" data-ing="{{recipe.ingredientLines}}" data-image="{{recipe.image}}" data-name="{{recipe.label}}" data-id="{{recipe.url}}">Save</button>
+                    <a href="{{recipe.url}}" class="btn btn-primary save-btn">Recipe</a>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Add to Meal Plan
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="/mealplanner">Monday</a>
+                        <a class="dropdown-item" href="/mealplanner">Tuesday</a>
+                        <a class="dropdown-item" href="/mealplanner">Wednesday</a>
+                        <a class="dropdown-item" href="/mealplanner">Thursday</a>
+                        <a class="dropdown-item" href="/mealplanner">Friday</a>
+                        <a class="dropdown-item" href="/mealplanner">Saturday</a>
+                        <a class="dropdown-item" href="/mealplanner">Sunday</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}

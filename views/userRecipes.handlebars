@@ -1,8 +1,9 @@
 
+<h3 class="text-center m-5">My Recipes</h3>
 <div id="recipe-container"class="container-fluid d-flex flex-wrap justify-content-center align-content-center m-3 rec-card-body rec-card">
   {{#if userRecipes.length}}
     {{#each userRecipes}}
-    <div id="search-card" class="card m-1" style="width: 18rem;">
+    <div id="search-card" class="card m-3">
       <img class="card-img-top" src="{{img}}" alt="{{name}}">
       <p id="hidden-ingredients">{{ingredients}}</p>
       <div class="card-body">
@@ -19,3 +20,4 @@
 </div>
 <script src="./js/mealPlan.js"></script>
 <script src="./js/delete.js"></script>
+<script src="./js/details.js"></script>
