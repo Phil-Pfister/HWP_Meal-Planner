@@ -1,17 +1,50 @@
-<div class="container h-75 align-items-center">
-    <h2 class="m-2 row justify-content-center">Recipe of the Day</h2>
+{{!-- <div class="container h-75 align-items-center">
+    <div class="row m-5 justify-content-center">
+        <h2 class="display-1 col">Welcome to Meal Match</h2>
+        <p id="intro-text" class="m-5 p-2">We can't wait to show you around. This is your one stop shop for all your meal planning needs. If you're new to our website, create an account to start building your recipe page!</p>
+        <a class="btn" style="width: fit-content;" href="/sign-up">Sign Up</a>
+    </div>
     <div class="row justify-content-center">
-        <div id='home-card' class="card mb-3 col-4 p-0">
+        <h2 class="m-5 col text-center display-2">Meal of the Minute</h2>
+    </div>
+    <div class="row justify-content-center">
+        <div id='home-card' class="card mb-3 col col-lg-5 p-0">
             <img class="card-img-top" src="{{oneRecipe.image}}" alt="{{recipe.name}}">
             <div class="card-body justify-content-center">
-                <h5 class="card-title">{{oneRecipe.label}}</h5>
-                <p class="card-text"><small class="text-muted">Click the button below to add to your Recipes</small></p>
+                <h5 id="card-title" class="card-title">{{oneRecipe.label}}</h5>
+                <p id="card-text" class="card-text"><small class="text-muted">{{#if logged_in}}Click the button below to add to your Recipes{{else}}Sign in to save this recipe{{/if}}</small></p>
                 {{#if logged_in}}
                 <button class="btn rec-card-body btn-primary save-button" data-ing="{{oneRecipe.ingredientLines}}" data-image="{{oneRecipe.image}}" data-name="{{oneRecipe.label}}" data-id="{{oneRecipe.url}}">Save</button>
                 {{/if}}
             </div>
+        </div>
     </div>
+</div>
+<script src="/js/rec-sav.js"></script> --}}
+
+<div id="home-container" class="container ">
+    <div class="row justify-content-center h-100 align-items-center">
+        <div class="col row-sm align-self-center d-flex flex-column justify-content-center">
+            <h2 class="display-2">Welcome to Meal Match</h2>
+            <p class="m-5 p-2 h2">We can't wait to show you around. This is your one stop shop for all your meal planning needs. If you're new to our website, create an account to start building your recipe page!</p>
+            {{#if logged_in}}
+            {{else}}
+            <a class="btn mx-auto" style="width: fit-content;" href="/sign-up">Sign Up</a>
+            {{/if}}
+        </div>
+        <div class="col">
+            <h2 id="card-name" class="m-2 row text-center">Meal of the Minute</h2>
+        <div id='home-card' class="card mb-3 p-0 align-self-center">
+            <img class="card-img-top" src="{{oneRecipe.image}}" alt="{{recipe.name}}">
+            <div class="card-body justify-content-center">
+                <h5 class="card-title">{{oneRecipe.label}}</h5>
+                {{#if logged_in}}
+                    <p class="card-text"><small class="text-muted">Click the button below to add to your Recipes</small></p>
+                    <button class="btn rec-card-body btn-primary save-button" data-ing="{{oneRecipe.ingredientLines}}" data-image="{{oneRecipe.image}}" data-name="{{oneRecipe.label}}" data-id="{{oneRecipe.url}}">Save</button>
+                {{/if}}
+            </div>
+        </div>
+        </div>
     </div>
 </div>
 <script src="/js/rec-sav.js"></script>
-
