@@ -27,12 +27,7 @@ async function deleteFormHandler(event) {
 
     
     if (response.ok) {
-      // const recList = document.getElementById('rec-list');
-      // const recIng = ingredients.split(',')
-      // for (i = 0; i < recIng.length; i++) {
-      //     recIng[i] = document.createElement('li')
-      //     recList.appendChild(recIng[i]);
-      // }
+     
       
       document.location.replace(`/api/recipe/details/${recipe_id}`);
     } else {
