@@ -7,12 +7,16 @@ const { User, Recipe } = require('../../models');
 router.get('/details/:id', async (req, res) => {
     try {
         const recipeData = await Recipe.findByPk(req.params.id);
-
+        
         const recipe = recipeData.get({ plain: true });
+        // console.log(recipe.ingredients);
+       recipe.ingredients = recipe.ingredients.split(',').join('\n');
+        
+        // console.log(recipe.ingredients);
 
         res.render('recipeDetails', {
             recipe,
-            loggedIn: req.session.loggedIn
+            logged_in: req.session.logged_in
         });
         res.status(200);
 

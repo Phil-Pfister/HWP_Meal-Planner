@@ -18,6 +18,7 @@ const saveButtonHandler = async (event) => {
     });
 
     if (response.ok) {
+       
         document.location.replace('/recipes')
     } else {
         alert('Failed to save');
