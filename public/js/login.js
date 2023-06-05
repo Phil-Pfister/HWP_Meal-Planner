@@ -6,7 +6,7 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector('#email-login').value.trim();
   const password = document.querySelector('#password-login').value.trim();
 
-  console.log(email, password);
+  // console.log(email, password);
 
   try {
     if (email && password) {
@@ -17,11 +17,11 @@ const loginFormHandler = async (event) => {
         headers: { 'Content-Type': 'application/json' },
       });
 
-      console.log(response);
+      // console.log(response);
 
       if (response.ok) {
-        const res = await response.json();
-        alert(res.message);
+        // const res = await response.json();
+        // alert(res.message);
 
         document.location.replace("/");
       } else {
