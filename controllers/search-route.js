@@ -15,13 +15,15 @@ const recipeAPIKey = process.env.RECIPE_API_KEY;
 router.get('/:id', async (req, res) => {
 
     try {
-        const z = Math.floor(Math.random() * 100);  
+        const z = Math.floor(Math.random() * 82);
+        
         const recipeData = await axios.get("https://api.edamam.com/search", {
             params: {
               q: req.params.id,
               app_id: recipe_id,
               app_key: recipeAPIKey,
               from: z,
+              to: z + 18,
             },
           });
           
