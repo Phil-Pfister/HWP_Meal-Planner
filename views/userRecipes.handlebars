@@ -1,5 +1,5 @@
 
-<div class="container-fluid d-flex flex-wrap justify-content-center align-content-center m-3 rec-card-body">
+<div id="recipe-container"class="container-fluid d-flex flex-wrap justify-content-center align-content-center m-3 rec-card-body rec-card">
   {{#if userRecipes.length}}
     {{#each userRecipes}}
     <div id="search-card" class="card m-1" style="width: 18rem;">
@@ -10,11 +10,12 @@
       </div>
       <div class="d-flex justify-content-around pb-2">
         <a href="{{url}}" class="btn btn-primary save-btn">Recipe</a>
-        <button href="/api/" id="meal-plan" class="btn btn-primary ">Details</a>
-        <button class="btn delete-button" data-id="{{id}}">Remove</button>
+        <button name="details" class="btn btn-primary details" data-num="{{id}}">Details</a>
+        <button id="remove" class="btn delete-button" data-id="{{id}}">Remove</button>
       </div>
     </div>
     {{/each}}   
   {{/if}}
 </div>
 <script src="./js/mealPlan.js"></script>
+<script src="./js/delete.js"></script>
