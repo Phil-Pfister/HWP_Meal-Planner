@@ -8,7 +8,7 @@ router.get('/details/:id', async (req, res) => {
     try {
         const recipeData = await Recipe.findByPk(req.params.id);
 
-        recipe = recipeData.get({ plain: true });
+        const recipe = recipeData.get({ plain: true });
 
         res.render('recipeDetails', {
             recipe,
