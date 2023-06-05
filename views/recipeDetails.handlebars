@@ -5,10 +5,14 @@
             </div>
             <div class="col d-flex flex-column justify-content-center align-items-center">
                 <h2 id="recipe-name">{{recipe.name}}</h2> 
-                <ul class="recipe-details m-3 font align-self-start">
+                <ul id="rec-list" class="recipe-details m-3 font align-self-start">
                     <li>{{recipe.url}}</li>
-                    <li class="recipe-details">Ingredients</li>
-                        <p>{{recipe.ingredients}}</p>
+                    <li class="recipe-details">Ingredients:</li>
+                      
+                       
+                        <p style="white-space: pre;">{{recipe.ingredients}}</p>
+                       
+                     
                     </ul>
                 </ul>
                 <div class="d-flex justify-content-around pb-2">
