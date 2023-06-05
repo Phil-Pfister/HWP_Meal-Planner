@@ -8,6 +8,8 @@ const saveButtonHandler = async (event) => {
     const url = event.target.getAttribute('data-id')
 
     
+    if (event.target.hasAttribute('data-id')) {
+
     
     const response = await fetch('/api/save', {
         method: 'POST',
@@ -24,5 +26,6 @@ const saveButtonHandler = async (event) => {
         alert('Failed to save');
     }
 };
+};
 
-document.querySelector('.rec-card-body').addEventListener('click', saveButtonHandler);
+document.querySelector('.rec-card-body').addEventListener('mousedown', saveButtonHandler);
