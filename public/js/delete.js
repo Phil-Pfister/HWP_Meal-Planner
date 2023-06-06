@@ -1,6 +1,6 @@
 async function deleteFormHandler(event) {
     event.preventDefault();
-    if (event.target.hasAttribute('id')) {
+    if (event.target.hasAttribute('data-id')) {
     const recipe_id = event.target.getAttribute('data-id');
   
   
