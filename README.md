@@ -9,7 +9,7 @@
 - [Description](#description)
 - [Usage](#usage)
 - [Installation](#installation)
-- [Contributing](#contributing)
+- [Contributing](#credits)
 - [Questions](#questions)
 - [License](#license)
 
@@ -60,11 +60,11 @@ Get a free api key at [Edemam](https://developer.edamam.com/edamam-recipe-api) a
 - Adam Hood [github](https://github.com/adamhood15)
 - Philipp Winston [github](https://github.com/PhilippWinston)
 
-## Tests
+
 
 ---
 
-## Links
+## Questions
 
 ---
 
