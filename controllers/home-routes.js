@@ -9,11 +9,12 @@ const recipe_id = process.env.RECIPE_ID;
 
 const recipeAPIKey = process.env.RECIPE_API_KEY;
 
-
+// searches API for single recipe
 router.get('/', async (req, res) => {
     try {
+        //random query function to get search parameter
         const QUERY = ranQuery();
-        // console.log(QUERY);
+        // generates random entry number for where in the list the entry comes from
         const z = Math.floor(Math.random() * 100);
         const recipeData = await axios.get("https://api.edamam.com/search", {
             params: {
@@ -23,17 +24,17 @@ router.get('/', async (req, res) => {
               from: z,
             },
           });
-      
+          // picks a random number from the ten generated above
         let i = Math.floor(Math.random() * 10);
        const oneRecipe = recipeData.data.hits[i].recipe;
        const recipeId = oneRecipe.uri.slice(-32)
-       
+       //renders to the home page
         res.render('homepage',{ oneRecipe, recipeId, logged_in: req.session.logged_in });
     } catch (err) {
         res.status(500).json(err);
     }
 });
-
+// login route
 router.get('/login', async (req, res) => {
     try {
         res.render('login');
@@ -43,7 +44,7 @@ router.get('/login', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
+// sign up route
 router.get('/sign-up', async (req, res) => {
     try {
         res.render('signup');
@@ -53,7 +54,7 @@ router.get('/sign-up', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
+// route to get user recipes
 router.get('/recipes', withAuth, async (req, res) => {
     try {
         const recipeData = await Recipe.findAll({
@@ -85,7 +86,7 @@ router.get('/recipes', withAuth, async (req, res) => {
     res.status(500).json(err);
  }
 });
-
+// coming soon!
 router.get('/meal-planner', withAuth, (req, res) => {
     res.render('mealPlanner');
 })

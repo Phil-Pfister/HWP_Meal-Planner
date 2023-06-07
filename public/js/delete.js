@@ -1,3 +1,5 @@
+//recipe delete handler
+
 async function deleteFormHandler(event) {
     event.preventDefault();
     if (event.target.hasAttribute('data-id')) {
