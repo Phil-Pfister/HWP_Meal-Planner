@@ -1,3 +1,5 @@
+//calls the recipes details page when button is clicked
+
 async function detailsPage (event) {
     event.preventDefault();
 

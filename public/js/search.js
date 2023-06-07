@@ -1,4 +1,5 @@
 
+// recipe search handler
 const searchFormHandler = async (event) => {
     event.preventDefault();
     const QUERY = document.querySelector('#search-bar').value;

@@ -11,12 +11,14 @@ require('dotenv').config();
 const recipe_id = process.env.RECIPE_ID;
 
 const recipeAPIKey = process.env.RECIPE_API_KEY;
-
+// recipe search route
 router.get('/:id', async (req, res) => {
 
     try {
+
+        //selects a random starting point for recipe data response
         const z = Math.floor(Math.random() * 82);
-        
+        // sends back 18 recipes
         const recipeData = await axios.get("https://api.edamam.com/search", {
             params: {
               q: req.params.id,
@@ -28,7 +30,7 @@ router.get('/:id', async (req, res) => {
           });
           
           const recipes = recipeData.data.hits;
-          
+          // gets unique identifier for single recipe search from edamam api
           recipes.forEach(recipe => {
            recipe.recipe.uri = recipe.recipe.uri.slice(-32)
           });
